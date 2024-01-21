@@ -87,7 +87,7 @@
 }
 
 .body {
-  margin-top: 90px;
+  margin-top: 79px;
 }
 
 .res-cards {
@@ -281,34 +281,16 @@
 
 @media only screen and (max-width: 500px) {
   .hero {
-    /* background-color: red; */
+    border-radius: 38px;
+    /* margin-inline: 39px; */
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+    flex-direction: column;
     width: auto;
     height: 50vh;
-    /* background: rgb(34, 193, 195);
-    background: radial-gradient(
-      circle,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-  
-    ); */
-    background: rgb(238, 174, 202);
-    background: radial-gradient(
-      circle,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
-    );
-  
-    margin-inline-start: 39px;
-    margin-inline-end: 39px;
-    margin-top: 7rem;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    /* margin-top: 7rem; */
     display: flex;
-    flex-direction: column;
-    /* padding: 4px; */
-    /* z-index: -3; */
-  }
+    box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
+}
   
   .text-container {
     width: auto;
@@ -354,6 +336,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    border-radius: 13px;
     /* background: #b44d4d; */
   }
   
