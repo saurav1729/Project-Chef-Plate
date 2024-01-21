@@ -181,7 +181,7 @@
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
-@media only screen and (max-width: 2624px) {
+@media only screen and (min-width: 500px) {
   .hero {
     /* background-color: red; */
     width: auto;
@@ -279,11 +279,11 @@
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 500px) {
   .hero {
     /* background-color: red; */
     width: auto;
-    height: 60vh;
+    height: 50vh;
     /* background: rgb(34, 193, 195);
     background: radial-gradient(
       circle,
@@ -305,18 +305,18 @@
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
     display: flex;
-    flex-direction: row;
-    padding: 4px;
+    flex-direction: column;
+    /* padding: 4px; */
     /* z-index: -3; */
   }
   
   .text-container {
-    width: 50%;
-    height: auto;
-  
+    width: auto;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
     text-align: center;
     position: relative;
     animation: mymove2 1s;
@@ -333,16 +333,21 @@
    
   }
   
-  /* .text-container > p {
-    /* background-color: yellow; */
-  /* }
-  .text-container > h4 { */
-    /* background-color: red; */
-  /* } */ 
-  
+   .text-container > p {
+   display: none;
+ }
+  /* .text-container > h4 { 
+     display: hidden;
+   } 
+   */
+
+
+   .tertiary-text{
+    display: none;
+   }
   .image-container {
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 50%;
     position: relative;
     animation: mymove 1s;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -359,37 +364,21 @@
     border-radius: 10px;
   }
   
-  /* div {
-    width: 100px;
-    height: 50px;
-    background-color: red;
-    font-weight: bold;
-    position: relative;
-    animation: mymove 5s;
-    animation-fill-mode: forwards;
-  }
-  
-  #div1 {animation-timing-function: linear;}
-  #div2 {animation-timing-function: ease;}
-  #div3 {animation-timing-function: ease-in;}
-  #div4 {animation-timing-function: ease-out;}
-  #div5 {animation-timing-function: ease-in-out;}
-  */
-  
+ 
   @keyframes mymove {
     from {
-      right: 0%;
+      bottom: 0%;
     }
     to {
-      right: 50%;
+      bottom: 50%;
     }
   }
   @keyframes mymove2 {
     from {
-      left: 0%;
+      top: 0%;
     }
     to {
-      left: 50%;
+      top: 50%;
     }
   }
 }
