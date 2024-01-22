@@ -6,6 +6,7 @@ import { RES_API } from "../../Utils/Constants";
 // import ResList from "../Utils/mock_data"; "../Utils/mock_data";
 import Hero from "../Hero/Hero";
 import Shimmer from "../Shimmer/Shimmer";
+import './body.css'
 
 
 

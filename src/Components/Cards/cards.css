@@ -1,0 +1,53 @@
+.res-cards {
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1.5rem;
+    width: 236px;
+    height: 328px;
+    padding-bottom: 0.8rem;
+    padding: 8px;
+    margin-top: 20px;
+  
+    /* position: relative;
+    transition: 5s smooth ease-in-out; */
+  }
+  
+  .res-cards:hover {
+    box-shadow: 0 0 18px lightgrey;
+    /* transform: scale(1.5rem); */
+    transition: 5s smooth ease-in-out;
+  }
+  .res-image {
+    width: 100%;
+    height: 65%;
+  }
+  
+  .res-image > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5em;
+  }
+  
+  .res-name {
+    font-family: ui-sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    margin: 10px 15px;
+    font-weight: 800;
+  }
+  
+  .cousines {
+    font-size: small;
+    margin-block-start: -7px;
+    margin-inline-start: 13px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .rest-component {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    margin-inline-start: 10px;
+    margin-block-start: 13px;
+  }

@@ -1,3 +1,5 @@
+import "./Shimmer.css"
+
 const Shimmer = () => {
   const CardShimmer = () => (
    

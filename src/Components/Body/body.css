@@ -1,0 +1,42 @@
+
+.body {
+    margin-top: 90px;
+  }
+  
+  
+  .res-container {
+   
+    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-start: 5px;
+    margin-inline-start: 73px;
+  }
+  
+  .wait_time {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    font-weight: 400;
+  }
+  
+  .filter-btn {
+    /* display: inline-block; */
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .filter-btn:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.12);
+  }

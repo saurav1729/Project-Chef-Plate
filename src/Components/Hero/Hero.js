@@ -1,4 +1,5 @@
 import { hero_image } from "../../Utils/Constants";
+import './Hero.css'
 
 
 const  Hero=()=> {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Image_url } from "../../Utils/Constants";
+import './cards.css'
 
 export const Cards=(props)=>{
     /* we can also destructue it 

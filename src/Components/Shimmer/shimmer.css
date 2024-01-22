@@ -1,0 +1,101 @@
+
+@keyframes shimmer-color {
+    0%   {background-color: rgb(255, 255, 255);}
+    25%  {background-color: rgb(226, 226, 224);}
+    50%  {background-color: rgb(237, 237, 237);}
+    100% {background-color: rgb(218, 218, 218);}
+  }
+  
+  
+  
+  
+  .shimmer-cards {
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1.5rem;
+    width: 236px;
+    height: 328px;
+    padding-bottom: 0.8rem;
+    padding: 8px;
+    margin-top: 20px;
+    position: relative;
+    transition: 5s smooth ease-in-out;
+  }
+  
+  
+  
+  .shimmer-image {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 60%;
+    background: #f0f0f0;
+    animation-name: shimmer-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  
+  }
+  
+  .shimmer-name {
+    background-color: #f0f0f0;
+    width: 114px;
+    height: 24px;
+    margin: 10px 15px;
+    font-family: ui-sans-serif;
+    border-radius: 5px;
+    animation-name: shimmer-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .shimmer-cousines {
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    margin-block-start: 15px;
+    margin-inline-start: 13px;
+    background-color: #f0f0f0;
+    width: 222px;
+    height: 10px;
+    border-radius: 5px;
+    animation-name: shimmer-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .shimmer-component {
+    margin-block-start: 23px;
+    margin-inline-start: 13px;
+    display: flex;
+    justify-content: space-between;
+    /* animation-name: shimmer-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+  }
+  
+  .shimmer-container {
+    margin-top: -5px;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-start: 5px;
+    margin-inline-start: 73px;
+  }
+  
+  .shimmer_time {
+    height: 17px;
+    width: 58px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    animation-name: shimmer-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .shimmer_rating {
+    background-color: #f0f0f0;
+    width: 27px;
+    height: 15px;
+    margin-inline-start: 123px;
+    border-radius: 5px;
+     animation-name: shimmer-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
