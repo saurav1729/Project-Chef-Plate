@@ -230,7 +230,7 @@
     background: linear-gradient(to right, #ae59d0,rgb(213, 120, 120),rgb(103, 103, 207));
     background-clip:text ;
     color: transparent;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
    
   }
@@ -310,10 +310,10 @@
     background: linear-gradient(to right, #ae59d0,rgb(213, 120, 120),rgb(103, 103, 207));
     background-clip:text ;
     color: transparent;
-    font-size: 4em;
+    font-size: 3rem;
     text-align: center;
    
-  }
+  } 
   
    .text-container > p {
    display: none;
@@ -327,7 +327,7 @@
    .tertiary-text{
     display: none;
    }
-   
+
    .image-container {
     border-radius: 49px;
     width: auto;
