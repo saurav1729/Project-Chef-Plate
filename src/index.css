@@ -287,7 +287,7 @@
     flex-direction: column;
     width: auto;
     height: 50vh;
-    /* margin-top: 7rem; */
+    
     display: flex;
     box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
 }
@@ -327,25 +327,23 @@
    .tertiary-text{
     display: none;
    }
-  .image-container {
+   .image-container {
+    border-radius: 49px;
     width: auto;
     height: 50%;
+    padding-top: 8px;
+    padding: 6px;
+    animation: 1s ease-in-out forwards mymove;
     position: relative;
-    animation: mymove 1s;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    border-radius: 13px;
-    /* background: #b44d4d; */
-  }
+    box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
+}
   
-  .image-container > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+.image-container > img {
+  object-fit: cover;
+  border-radius: 55px;
+  width: 100%;
+  height: 100%;
+}
   
  
   @keyframes mymove {
