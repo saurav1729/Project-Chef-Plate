@@ -55,11 +55,7 @@
     /* float: left; */
     /* color: #000; */
     background: rgb(34, 193, 195);
-    background: linear-gradient(
-      0deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-    );
+    background: linear-gradient(to right, #ae59d0,rgb(213, 120, 120),rgb(103, 103, 207));
     background-clip: text;
     color: transparent;
     border-radius: 0 0 8px 8px;
