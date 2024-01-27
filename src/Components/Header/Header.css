@@ -1,18 +1,20 @@
 
 .header {
     --bgcolor: #e5f1f1;
-    width: 100%;
+    width: 99%;
     display: flex;
     justify-content: space-between;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     background-color: var(--bgcolor);
     margin: 2px 4px;
-    box-shadow: 0 0 18px #e8e8e8;
+    /* box-shadow: 0 0 18px #e8e8e8; */
     position: fixed;
     top: 0;
+    overflow: hidden;
     border-radius: 20px;
+    /* left:0;
+    right:0; */
     z-index: 5;
-  
     /* top:60px */
   }
   
@@ -59,21 +61,27 @@
     background-clip: text;
     color: transparent;
     border-radius: 0 0 8px 8px;
-    margin: 0 73px 0 0;
-    padding: 0 7px;
-    font-size: 1.3em;
+    /* margin: 0 73px 0 0; */
+    padding: 0 16px;
+    font-size: 22px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s ease-in-out;
   }
+
   
-  .navItems > ul :hover {
-    background: unset;
+  .navItems > ul>li:hover {
+    /* background: unset; */
     /* background-color:grey; */
-    background-clip: unset;
-    color: #fff;
+    /* background-clip: unset; */
+    /* color: #fff; */
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
     scale: 0.8;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  a{
+    text-decoration: none;
+    background:no;
   }

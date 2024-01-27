@@ -1,0 +1,101 @@
+.restinfo-card{
+    width:60%;
+    height: 200px;
+    /* background-color: red; */
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    margin:100px auto;
+    text-align: center;
+    border-radius: 10px 0 10px 0;
+  
+}
+
+.name{
+    font-size: 70px;
+    font-weight: 600;
+    background-color: linear-gradient(to right red blue);
+
+}
+
+
+
+.resturant-rating {
+    text-align: center;
+    float: bottom;
+    border: 1px solid #e9e9eb;
+    border-radius: 6px;
+    max-width: auto;
+    /* padding: 8px; */
+    box-shadow: 0 1px 5px #f9f9f9;
+}
+
+
+.left {
+    float: left;
+    margin-block-start: 20px;
+    margin-inline-start: 14px;
+}
+
+.info {
+    margin-top: 35px;
+    font-size: 1.12rem;
+    color: #7e808c;
+    font-weight: 500;
+    margin: 5px;
+    /* float: left; */
+}
+
+.right {
+    float: right;
+    margin-bottom: 13px;
+    /* margin-left: 34px; */
+    margin-block-start: -48px;
+    margin-inline-end: 18px;
+}
+
+
+
+.image{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    float: center;
+}
+
+
+.rating {
+    color: green;
+    border-bottom: 1px solid #e9e9eb;
+    width: auto;
+  
+    margin: 4px;
+    padding: 5px 10px;
+}
+
+.total-string{
+    color: #8b8d97;
+}
+.primary-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.deliverytime{
+    text-align: center;
+    color: rgb(177, 100, 0);;
+    margin-inline-end: 5px;
+    font-size: 20px;
+    padding-right: 10px;
+    float: left;
+}
+.costforTwo{
+    text-align: center;
+    color: rgb(177, 100, 0);;
+    border-left: 1px solid #191919;
+    margin-inline-end: 5px;
+    font-size: 20px;
+    padding-right: 10px;
+    float: left;
+    padding-left: 10px;
+}

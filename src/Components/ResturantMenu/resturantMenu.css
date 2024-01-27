@@ -1,0 +1,13 @@
+.resturants-page{
+    width:100%;
+    margin-top: 80px;
+    /* min-height: calc(100vh - 400px); */
+}
+
+.divider{
+    border-bottom: 0.5px solid #d3d3d3;
+    height: 0.1px;
+    width: 60%;
+    margin: 14px auto;
+    
+}

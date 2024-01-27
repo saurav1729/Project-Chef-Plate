@@ -87,6 +87,7 @@
     animation-name: shimmer-color;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    transition: smooth;
   }
   
   .shimmer_rating {

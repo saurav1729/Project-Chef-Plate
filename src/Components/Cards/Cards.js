@@ -11,7 +11,7 @@ export const Cards=(props)=>{
     }=resdata?.info;
 
     // const{slaString}=resdata.info?.sla;
-    console.log(resdata);
+    // console.log(resdata);
     return(
         
         <div className="res-cards">

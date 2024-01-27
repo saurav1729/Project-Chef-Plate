@@ -1,6 +1,7 @@
 import { LOGO_URL } from "../../Utils/Constants";
 import { useState } from "react";
 import './Header.css'
+import { Link } from "react-router-dom";
 
 const Header=()=>{
 
@@ -13,9 +14,9 @@ const Header=()=>{
           </div>
           <div className="navItems">
               <ul>
-                  <li>Home</li>
-                  <li>Reach Us</li>
-                  <li>cart</li>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/about">Reach us</Link></li>
+                  <li><Link to="/contact">cart</Link></li>
                   <li onClick={()=>{
                     if(loginValue=== "Log out"){
                         setLoginValue("Log in");
@@ -23,7 +24,7 @@ const Header=()=>{
                     else{
                         setLoginValue("Log out");
                     }
-                  }}>{loginValue}</li>
+                  }}><Link to="/contact">{loginValue}</Link></li>
               </ul>
           </div>
         </div>
