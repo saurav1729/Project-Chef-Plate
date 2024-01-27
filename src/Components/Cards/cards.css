@@ -6,7 +6,7 @@
     padding-bottom: 0.8rem;
     padding: 8px;
     margin-top: 20px;
-  
+    
     /* position: relative;
     transition: 5s smooth ease-in-out; */
   }
@@ -50,4 +50,8 @@
     display: flex;
     margin-inline-start: 10px;
     margin-block-start: 13px;
+  }
+  a{
+    text-decoration: none;
+    color:inherit
   }

@@ -7,6 +7,7 @@ import { RES_API } from "../../Utils/Constants";
 import Hero from "../Hero/Hero";
 import Shimmer from "../Shimmer/Shimmer";
 import "./body.css";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
@@ -131,7 +132,7 @@ const Body = () => {
           <div>No result fount for {searchText}</div>
         ) : (
           resList.map((resturant) => (
-            <Cards key={resturant?.info?.id} resdata={resturant} />
+            <Link   key={resturant?.info?.id}  to={"/resturants/"+ resturant?.info?.id}><Cards resdata={resturant} /></Link>
           ))
         )}
       </div>

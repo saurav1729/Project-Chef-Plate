@@ -1,20 +1,23 @@
-import './Sectioncards.css'
+import './Sectioncards.css';
 import MenuData from '../MenuData/MenuData';
 
 const SectionCard = (props) => {
   const { resdata } = props;
-  console.log(resdata);
+  // console.log(resdata);
   
   // Extract itemCards and get its length
   const itemCards = resdata?.card?.card?.itemCards;
-  console.log(itemCards);
+  // console.log(itemCards);
   const length = itemCards ? itemCards.length : 0;
+
+
 
   return (
     <>
       <div className="cards">
-          {resdata?.card?.card?.title} ({length})
+        {resdata?.card?.card?.title} ({length})
       </div>
+   
       <div className='menudata'>
       {
      itemCards?.map((menu,index) => (
@@ -22,8 +25,8 @@ const SectionCard = (props) => {
           ))
         }
       </div>
-      </>
+    </>
   ); 
-}
+};
 
 export default SectionCard;

@@ -4,9 +4,14 @@ import { RES_info } from "../../Utils/Constants"
 import "./resturantMenu.css"
 import ResturantInfo from "../../Resturantinfo/ResturantInfo"
 import SectionCard from "../SectionCard/SectionCard"
+import { useParams } from "react-router-dom"
+
 const ResturantMenu = () => {
     const [resInfo,setInfo]=useState({});
     const[resMenu, SetMenu]=useState([]);
+
+    const {resId}=useParams();
+   
 
     useEffect(()=>{
               fetchData();
@@ -14,7 +19,7 @@ const ResturantMenu = () => {
 
     const fetchData=async()=>{
         const data = await fetch(
-            RES_info
+            RES_info+resId
         );
        const json  = await data.json();
       const array = json?.data?.cards[0]?.card?.card?.info;
@@ -29,7 +34,7 @@ const ResturantMenu = () => {
     }
     
     // const [name,cuisines,areaName,avgRating,isopen,locality,totalRatingString]=json?.data?.cards[0]?.card?.card?.info;
-    console.log(resMenu);
+    // console.log(resMenu);
 
   return (
     <>
