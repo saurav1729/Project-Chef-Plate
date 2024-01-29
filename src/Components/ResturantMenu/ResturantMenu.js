@@ -2,7 +2,7 @@ import { RES_API } from "../../Utils/Constants"
 import { useState, useEffect } from "react"
 import { RES_info } from "../../Utils/Constants"
 import "./resturantMenu.css"
-import ResturantInfo from "../../Resturantinfo/ResturantInfo"
+import ResturantInfo from "../Resturantinfo/ResturantInfo"
 import SectionCard from "../SectionCard/SectionCard"
 import { useParams } from "react-router-dom"
 
@@ -26,15 +26,15 @@ const ResturantMenu = () => {
       // const array2 = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR;
         
       const newInfo = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-      // console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
-
+      // (json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
       setInfo(array);
       SetMenu(newInfo);
 
     }
     
     // const [name,cuisines,areaName,avgRating,isopen,locality,totalRatingString]=json?.data?.cards[0]?.card?.card?.info;
-    // console.log(resMenu);
+    // (resMenu);
+    
 
   return (
     <>
@@ -42,7 +42,7 @@ const ResturantMenu = () => {
      <ResturantInfo resDetail={resInfo}/>
      <div className="divider"></div>
     {
-     resMenu.slice(1)?.map((menu,index) => (
+     resMenu?.map((menu,index) => (
             <SectionCard key={index} resdata={menu} />
           ))
         }

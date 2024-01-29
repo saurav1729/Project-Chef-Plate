@@ -35,29 +35,26 @@
     text-decoration: none;
     border-radius: 8px;
     color: #ffffff;
-    background: linear-gradient(to right, #ae59d0,#e07d7d,rgb(103, 103, 207));
+    background: linear-gradient(to right, #ae59d0,rgb(103, 103, 207));
     border: 2px solid #3498db;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   }
   
   .filter-btn:hover {
-    background-color: #2980b9;
-    color: #ffffff;
+    /* background-color: #2980b9; */
+    color: #ffff;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.12);
   }
 
 .filter-container {
     justify-content:space-between;
     width: 95%;
-    height: 130px;
+    height: auto;
     margin: 20px 39px;
     display: flex;
     border-radius: 12px;
-    align-items: center;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.1) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
-    /* border: 5px solid; */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
 }
 
 .filter-container:hover{
@@ -65,12 +62,14 @@
 }
 
 .flt-text{
-  margin:10px 20px;
+  margin:5px 20px;
   /* height: 40px; */
-  font-size: 3rem;
-  padding-bottom: 5px;
+  font-size: 2rem;
+  word-spacing: 15px;
+  /* padding-bottom: 5px; */
   text-transform: capitalize;
-  background :linear-gradient(to left bottom, blue 10%,red);
+  /* background :linear-gradient(to left bottom, blue 10%,red); */
+  background: linear-gradient(to right, #ae59d0, #ed4e4e 71%, #6e6ef7);
   background-clip: text;
   color: transparent;
   font-family:Inter;
@@ -78,9 +77,6 @@
 
 .search-container {
   justify-content: cneter;
-  /* background: #fff; */
-  /* align-items: center; */
-  gap: 3rem;
   width: 90%;
   height: 40px;
   margin: 50px 5%;
@@ -99,10 +95,11 @@
   border-radius: 20px;
   width: 34%;
   padding: 10px;
-  box-shadow: 0 2px 8px #63636333;
+  box-shadow: 0 2px 8px #d688d0;
   display: flex;
   justify-content: space-between;
-  box-shadow:0px 3px 15px rgba(113,115,119,0.5); 
+  position: relative;
+  /* box-shadow:0px 3px 15px rgba(113,115,119,0.5);  */
 }
 
 .search-box > input {
@@ -111,9 +108,11 @@
   border: 0 solid;
   width: 90%;
   height: 20px;
+  font-size: 18px;
   margin-inline-start: 9px;
   text-overflow: ellipsis;
   text-align: left;
+ 
 }
 
 
@@ -134,10 +133,55 @@ ion-icon{
   margin-right: 5px;
   cursor: pointer;
   font-size: 20px;
-  
+}
+
+.searchButton {
+  /* background-color: red; */
+  width: 20px;
+  height: 20px;
+  padding-right: 2px;
+  position: absolute;
+  right: 0px;
+  padding: 10px;
+  bottom: -1px;
+  border: 0 0 0 1px gray;
+  box-shadow: -1px 0px 3px #94bbe9;
+  border-radius: 0 20px 20px 0;
+  /* border: 1px red; */
+  /* box-shadow: inset; */
 }
 
 .search-btn:hover{
       transform: scale(1.1);
 }
 
+.foodContainer{
+   width: 90%;
+   margin: 10px auto;
+   height: auto;
+   background-color: red;
+   display: flex;
+}
+
+
+.image_list{
+  display: flex;
+  justify-content: space-between;
+  margin:20px 60px;
+  overflow: scroll;
+  /* -ms-overflow-style: none;  Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+
+
+.image_list::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.food_card>img{
+  height: 164px;
+  width: 138px;
+  object-fit: cover;
+  cursor: pointer;
+  /* overflow-x: scroll; */
+}

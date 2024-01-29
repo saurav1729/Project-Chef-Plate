@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=PT+Sans&display=swap');
 .res-cards {
     border: 0.1rem solid #e8e8e8;
     border-radius: 1.5rem;
-    width: 236px;
-    height: 328px;
+    width: 220px;
+    height: 300px;
     padding-bottom: 0.8rem;
     padding: 8px;
-    margin-top: 20px;
+    overflow: hidden;
+    /* margin-top: 20px; */
     
     /* position: relative;
     transition: 5s smooth ease-in-out; */
+    
   }
   
   .res-cards:hover {
-    box-shadow: 0 0 18px lightgrey;
+    box-shadow: 0 0 18px lightgrey, 0 2px 12px palevioletred;
     /* transform: scale(1.5rem); */
     transition: 5s smooth ease-in-out;
   }
@@ -28,28 +32,32 @@
   }
   
   .res-name {
-    font-family: ui-sans-serif;
+    font-family: PT Sans;
     font-size: 17px;
     margin-top: 10px;
-    margin: 10px 15px;
+    margin: 10px 11px;
     font-weight: 800;
   }
   
   .cousines {
-    font-size: small;
-    margin-block-start: -7px;
+    font-size: 13px;
+    margin-block-start: -3px;
     margin-inline-start: 13px;
     overflow: hidden;
     text-wrap: nowrap;
     text-overflow: ellipsis;
+    color: #7e808c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .rest-component {
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    margin-inline-start: 10px;
-    margin-block-start: 13px;
+    margin-inline-start: 8px;
+    margin-block-start: 8px;
+    text-overflow: ellipsis;
+    font-family: Gowun Batang;
   }
   a{
     text-decoration: none;

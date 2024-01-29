@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './resturantinfo.css'
-import { Image_url } from '../Utils/Constants';
+import { Image_url } from '../../Utils/Constants';
 
 const ResturantInfo = (props) => {
 
 
   const {resDetail}= props;
   const {name, logo,avgRatingString,totalRatingsString,cuisines,locality,areaName}=resDetail;
-    // console.log(resDetail);
-    // console.log(totalRatingsString);
+    // (resDetail);
+    // (totalRatingsString);
     
   
 
@@ -22,7 +22,7 @@ const ResturantInfo = (props) => {
        <div className="info">{cuisines?.join(',')}</div>
        <div className='info'>{locality},{areaName}</div>
        <div className='info'>{open}</div>
-       <i class="fa-solid fa-bicycle deliverytime"></i>
+       <i className="fa-solid fa-bicycle deliverytime"></i>
        <div className='deliverytime'>{resDetail?.sla?.lastMileTravelString}</div>
        <div className='costforTwo'>{resDetail?.costForTwoMessage}</div>
        </div>
@@ -30,7 +30,7 @@ const ResturantInfo = (props) => {
        <div className='right'>
        <img className="image" src={Image_url+logo} alt={name}></img>
        <div className='resturant-rating'>
-       <i class="fa-solid fa-star rating">
+       <i className="fa-solid fa-star rating">
         {avgRatingString}
        </i>
        <div className='total-string'>{totalRatingsString}</div>

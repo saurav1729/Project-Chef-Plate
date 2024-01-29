@@ -6,6 +6,9 @@ const MenuData = (props) => {
     const{menuData}=props;
      console.log(menuData);
      let[counter,setcounter]=useState(0);
+
+
+     
      const addValue=()=>{
       
        if(counter<20){
@@ -38,7 +41,7 @@ const MenuData = (props) => {
       <div className='item-price'><i class="fa-solid fa-indian-rupee-sign"></i>{defaultPrice/100||price/100}</div>
       <p className='item-desc'>{desc}</p>
       <span>
-      <i class="fa-solid fa-star newrating">
+      <i className="fa-solid fa-star newrating">
         {newRating}
        </i>
       </span>
