@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import FoodList from "../FoodList/FoodList";
 // import '../FoodList/FoodList.css'
 import { Image_url } from '../../Utils/Constants';
+import { Cities } from "../../Utils/Cities";
+
 
 const Body = () => {
   const [resList, setResList] = useState([]);
@@ -19,9 +21,12 @@ const Body = () => {
   const [searchText, setText] = useState("");
   const [btnclass, setBtnclass] = useState("fa-magnifying-glass");
   const [foodItems, setfoodItems]=useState([]);
+  
+  //set longitude and latitude for the api
+  const[latitude,setLatitude]=useState();
+  const[longitude,setLongitude]=useState();
 
-
-
+  //  console.log(Cities);
   //?whenver state variable changes react triggers the reconsilation cycle (rerenders the whole component);
 
   // console.log("Body rendered");
@@ -40,32 +45,19 @@ const Body = () => {
         ?.restaurants;
     
    const foodData =json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
-
-  //  console.log(foodData);
   
  const indices=[2,3,4,6,7,8,11,17];
   const newFooditem = indices.map((index)=>(foodData[index]));
    setfoodItems(foodData);
-   console.log(newFooditem)
+  //  console.log(newFooditem)
 
-  // console.log(json);
-    // console.log(
-    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
-    // con  sole.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.info?.id);
-    //  const array1 =json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    //  const newArray=array.concat(array1);
     setResList(array);
-    // console.log(resList)
+
     setDefaultList(array);
   };
 
 
-//  setfoodItems(newFooditem);
-
-
-  // console.log(foodItems);
-  console.log(resList);
+  // console.log(resList);
 
   //*function for fetching the shimmer component
 
@@ -107,6 +99,22 @@ const Body = () => {
           {buttonName}
         </button></Link>
       </div>
+       <div>
+        <label for="cities">Choose Your city</label>
+        <select name="cities" onChange={(e) => {
+         const city= Cities.find((Element)=>Element.city==e.target.value
+          );
+      setLatitude(city.lat);
+      setLongitude(city.lng);
+}}>
+  {Cities.map((c, i) => (
+    <option key={i} value={c.city} >{c.city}</option>
+  ))}
+</select>
+
+
+
+       </div>
 
       <div className="image_list">
       

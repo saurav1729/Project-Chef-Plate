@@ -13,28 +13,28 @@
     box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
     border-radius: 21px;
 }
-    .text-container {
-      width: auto;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      text-align: center;
-      position: relative;
-      animation: mymove2 1s;
-      animation-fill-mode: forwards;
-    }
+.text-container {
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: auto;
+  animation: 1s forwards mymove2;
+  display: flex;
+  position: relative;
+}
     
-    .welcome-text {
-      color: #0000;
-      text-align: center;
-      background: linear-gradient(to right, #ae59d0, #ed4e4e 71%, #6e6ef7);
-      -webkit-background-clip: text;
-      background-clip: text;
-      font-size: 59px;
-      font-family: fangsong;
-      font-style: italic;
-  }
+.welcome-text {
+  color: #0000;
+  text-align: center;
+  background: linear-gradient(to right, #ae59d0, #ed4e4e 71%, #6e6ef7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: fangsong;
+  font-size: 42px;
+  font-style: italic;
+  margin-inline-end: 40px;
+}
     
     /* .text-container > p {
       /* background-color: yellow; */
@@ -44,16 +44,13 @@
     /* } */ 
     
     .image-container {
-      width: 44%;
+      border-radius: 20px;
+      width: 34%;
       height: auto;
       animation: 1s ease-in-out forwards mymove;
       position: relative;
       box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
-      border-radius: 20px;
-      margin-left: 56px;
-      
   }
-    
   .image-container > img {
     object-fit: cover;
     border-radius: 24px;
