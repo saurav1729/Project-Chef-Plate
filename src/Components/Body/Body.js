@@ -100,17 +100,7 @@ const Body = () => {
         </button></Link>
       </div>
        <div>
-        <label for="cities">Choose Your city</label>
-        <select name="cities" onChange={(e) => {
-         const city= Cities.find((Element)=>Element.city==e.target.value
-          );
-      setLatitude(city.lat);
-      setLongitude(city.lng);
-}}>
-  {Cities.map((c, i) => (
-    <option key={i} value={c.city} >{c.city}</option>
-  ))}
-</select>
+      
 
 
 

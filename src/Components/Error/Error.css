@@ -1,0 +1,36 @@
+.error-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+    gap:3rem;
+    ;
+}
+
+
+.errImg_container{
+    height: 70vh;
+    width: 40vw;
+    
+}
+
+.errImg_container>img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.err_section>h1{
+    font-size: 60px;
+    text-align: center;
+    background-color: linen;
+    border-radius:;
+   
+}
+
+.err_section>h1>p{
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(232, 92, 92);
+}
+

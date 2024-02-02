@@ -22,3 +22,5 @@ export const veg_img =
 export const Nonveg_img =
   "https://i.pinimg.com/564x/61/12/6d/61126d135fe2433d3c744dddc3b0343d.jpg";
 
+export const error_img="https://b.zmtcdn.com/images/z404x2.png?output-format=webp";
+
