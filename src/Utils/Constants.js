@@ -24,3 +24,6 @@ export const Nonveg_img =
 
 export const error_img="https://b.zmtcdn.com/images/z404x2.png?output-format=webp";
 
+export const logo ="https://cdn.hellofresh.com/logo/whitelabel_logos_lg/cp_lg.png"
+export const gif = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmFkd3NvNmNkbGU1NWlveGhtYmJ6OW56dnNsNGQ1ZngxeXU5ZWczOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cWq3vhCorDkv5pXfuf/giphy.gif"
+

@@ -12,12 +12,13 @@ import FoodList from "../FoodList/FoodList";
 // import '../FoodList/FoodList.css'
 import { Image_url } from '../../Utils/Constants';
 import { Cities } from "../../Utils/Cities";
+import resmockdata from "../../Utils/ResMockData";
 
 
 const Body = () => {
-  const [resList, setResList] = useState([]);
+  const [resList, setResList] = useState(resmockdata);
   const [buttonName, setNewName] = useState("Top rated resturants");
-  const [defaultList, setDefaultList] = useState([]);
+  const [defaultList, setDefaultList] = useState(resmockdata);
   const [searchText, setText] = useState("");
   const [btnclass, setBtnclass] = useState("fa-magnifying-glass");
   const [foodItems, setfoodItems]=useState([]);

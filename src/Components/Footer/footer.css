@@ -3,5 +3,27 @@ footer {
     width: 100%;
     height: 333px;
     margin-block-start: 20px;
+    position: relative;
+    
 }
+
+.footer-logo{
+    position: absolute;
+    left:1rem;
+    top:2rem;
+}
+
+/* .footer-gif{
+    position: absolute;
+    left:1rem;
+    top:5rem;
+    height: 100px;
+    width: auto;
+}
+
+.footer-gif>img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+} */
 
