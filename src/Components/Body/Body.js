@@ -75,7 +75,9 @@ const Body = () => {
     <div className="">
       <Hero />
 
-      <div className="filter-container invisible tablet:visible  justify-between tablet:w-95%  h-auto  tablet:my-[20px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
+      {/* Filter Container */}
+
+      <div className="hidden tablet:staticjustify-between tablet:w-95%  h-auto  tablet:my-[20px] tablet:mx-[39px] tablet:flex rounded-[12px] tablet:mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
         <div className="flt-text my-[2px] mx-[20px] text-[5rem] font-bold capitalize space-x-2 bg-gradient-to-r from-[#ae59d0] via-[#ed4e4e] to-[#6e6ef7] bg-clip-text text-[transparent] font-[Inter] ">
           <h1>Satisfy Your Cravings</h1>
         </div>
