@@ -35,7 +35,7 @@ export const order_img="https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 
 // export const hero_bg="https://img.freepik.com/free-photo/plate-silhouette-tableware_23-2147694060.jpg?w=740&t=st=1707829978~exp=1707830578~hmac=db13dd1bddf41588e10710447ac85652e065cd7e7f536f0537f1cbc39d1d30b1"
 
-export const hero_bg = "https://img.freepik.com/free-photo/front-view-steel-fork-black-surface-copy-place_140725-62606.jpg?w=996&t=st=1707892622~exp=1707893222~hmac=1959844d3f67621b528dd84f2e7543e1be92e2dafc5e625f6e63ef3bbbb7d875"
+// export const hero_bg = "https://img.freepik.com/free-photo/front-view-steel-fork-black-surface-copy-place_140725-62606.jpg?w=996&t=st=1707892622~exp=1707893222~hmac=1959844d3f67621b528dd84f2e7543e1be92e2dafc5e625f6e63ef3bbbb7d875"
 
 export const MJ_LinkedIn="https://www.linkedin.com/in/saurav-jha-574171279/";
 export const  MJ_github="https://github.com/saurav1729";

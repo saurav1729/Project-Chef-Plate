@@ -1,12 +1,10 @@
 import { hero_image } from "../../Utils/Constants";
-import { order_img } from "../../Utils/Constants";
-import { hero_bg } from "../../Utils/Constants";
+
+import hero_bg from "../../resources/hero_bg.jpg"
 // import './Hero.css'
 
 
-const orderImg=()=>{
-  return order_img;
-}
+
 const Hero = () => {
   return (
     <div className="tablet:relative h-auto w-auto ">

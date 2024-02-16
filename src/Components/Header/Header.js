@@ -1,8 +1,9 @@
 import { LOGO_URL } from "../../Utils/Constants";
 import { useState } from "react";
 import { IoHomeOutline } from "react-icons/io5";
-import { header_bg } from "../../Utils/Constants";
+// import { header_bg } from "../../Utils/Constants";
 
+import header_bg from "../../resources/Header.jpg"
 import { Link } from "react-router-dom";
 
 
@@ -24,7 +25,7 @@ const Header = () => {
               <img className="object-cover h-[4.3rem] w-[4.3rem]" src={LOGO_URL} alt="Logo" />
           </div>
 
-          <ul className="flex justify-evenly list-none h-100% items-center w-auto text-xl font-bold tablet:gap-10 mr-6 text-[1.3rem] invisible">
+          <ul className="flex justify-evenly list-none h-100% items-center w-auto text-xl font-bold tablet:gap-10 mr-6 text-[1.3rem]">
               <li className="bg-gradient-to-r from-[red] to-orange bg-clip-text text-[transparent] font-bold cursor-pointer hover:text-[#fff] hover:scale-75 shadow-lg shadow-[#ac71a8] border border-[red] p-2 rounded-lg inset-shadow">
                   <Link to="/">Home</Link>
               </li>
