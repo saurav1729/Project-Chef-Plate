@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './resturantinfo.css'
+// import './resturantinfo.css'
 import { Image_url } from '../../Utils/Constants';
 
 const ResturantInfo = (props) => {
@@ -15,7 +15,7 @@ const ResturantInfo = (props) => {
   return (
     <>
   
-    <div className='restinfo-card'>
+    <div className='restinfo-card w-[60%] h-[200px] shadow-lg shadow-[#00000005] '>
     <h2 className='name'>{name}</h2>
        <div className='primary-container'>
        <div className='left'>

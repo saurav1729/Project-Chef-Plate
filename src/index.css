@@ -1,6 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=PT+Sans&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .inset-shadow {
+    box-shadow: 0 9px 9px rgba(38, 90, 157, 0.4), 0 7px 13px -3px #0000004d,
+      inset 0 -3px #0003;
+  }
+
+  .rescard-hover {
+    box-shadow: 0 0 18px lightgrey, 0 2px 12px palevioletred;
+    /* transform: scale(1.5rem); */
+    transition: 5s smooth ease-in-out;
+  }
+
+  .filter-Container-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+  }
+
+  .filter-Container-hover {
+    box-shadow: inset 0 15px 50px -8px rgb(166, 166, 215),
+      inset 0 12px 36px -18px #a299994d;
+  }
+
+  .no-scroll {
+    scrollbar-width: none;
+  }
+
+  .hero-image-shadow {
+    box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
+  }
+
+  .orderImage {
+    background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/iphone.svg");
+    background-size: 121px 126px;
+  }
+
+  .eatImage {
+    background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1002,h_600/v1678428358/portal/m/seo_web/dweb_header.png");
+    background-size: 121px 126px;
+  }
+
+  .deliveryImage {
+    background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/ScootScoot.svg");
+    background-size: 121px 126px;
+  }
+
+  @keyframes mymove {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 53%;
+    }
+  }
+  @keyframes mymove2 {
+    from {
+      left: 0%;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  
+  .footer-bg{
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+  }
+
+  .image-animation{
+         animation: 1s ease-in-out forwards mymove;
+  }
+  .text-animation{
+    animation: 1s ease-in-out forwards mymove2;
+  }
+
+  .header-image{
+    background-image: url('https://images.pexels.com/photos/139321/pexels-photo-139321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    border-radius: 35px;
+  }
+
+  .min-height{
+    min-height: calc(100vh - 400px);
+}
+
+
+.About-bg-image{
+  background-image: url('https://img.freepik.com/free-photo/red-light-round-podium-black-background-mock-up_43614-950.jpg?w=740&t=st=1707898694~exp=1707899294~hmac=0b3609b3cbed7f6251ce73fe79da391a301625b127b71335cad66c42a1307f10');
+
+  background-size: contain;
+}
+/* 
+.outline-text {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: blue;
+} */
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 /* implementing shimmer ui */
+
+.filter-inset {
+  box-shadow: inset 0 15px 50px -8px rgb(166, 166, 215),
+    inset 0 12px 36px -18px #a299994d;
+}
+
+@media (max-width: 640px) {
+  .object-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
