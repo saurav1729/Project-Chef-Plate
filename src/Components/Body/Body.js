@@ -75,12 +75,12 @@ const Body = () => {
     <div className="">
       <Hero />
 
-      <div className="filter-container  justify-between w-95%  h-auto my-[20px] mx-[39px] flex rounded-[12px] mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
+      <div className="filter-container invisible tablet:visible  justify-between tablet:w-95%  h-auto  tablet:my-[20px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
         <div className="flt-text my-[2px] mx-[20px] text-[5rem] font-bold capitalize space-x-2 bg-gradient-to-r from-[#ae59d0] via-[#ed4e4e] to-[#6e6ef7] bg-clip-text text-[transparent] font-[Inter] ">
           <h1>Satisfy Your Cravings</h1>
         </div>
         <Link hrefLang="#res-container"><button
-          className="filter-btn  py-[10px] px-[20px] mx-[20px] text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
+          className="filter-btn  tablet:py-[10px] tablet:px-[20px] tablet:mx-[20px] tablet:text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
           onClick={() => {
             let filteredList = resList.filter(
               (resList) => resList.info.avgRating > 4.0
