@@ -38,16 +38,19 @@
   .orderImage {
     background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/iphone.svg");
     background-size: 121px 126px;
+
   }
 
   .eatImage {
     background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1002,h_600/v1678428358/portal/m/seo_web/dweb_header.png");
     background-size: 121px 126px;
+
   }
 
   .deliveryImage {
     background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/ScootScoot.svg");
     background-size: 121px 126px;
+ 
   }
   .orderImageM {
     background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/iphone.svg");
