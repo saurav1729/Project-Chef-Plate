@@ -66,6 +66,18 @@
     background-image: url("https://cdn.doordash.com/media/consumer/home/landing/new/ScootScoot.svg");
     background-size: 121px 126px;
   }
+  @keyframes mynavbar{
+       from{
+        margin-top: -410px;
+       }
+       to{
+        margin-top: 70px;
+       }
+  }
+
+ .navbarAnimation{
+  animation: .5s ease-in-out forwards mynavbar ;
+ }
 
   @keyframes mymove {
     from {

@@ -3,9 +3,9 @@ import { About_bg } from "../../Utils/images";
 const About = () => {
   return (
   
-    <div className="tablet:w-[100%] h-auto   tablet:h-auto tablet:relative tablet:min-height tablet:-mb-[21rem] max-w-[1512px] mx-auto" >
+    <div className="tablet:w-[100%] h-auto  mt-[80px] tablet:mt-0 tablet:h-auto tablet:relative bg-gradient-to-r from-gray-dark  to-[#212020] tablet:bg-none  tablet:min-height tablet:-mb-[21rem] max-w-[1512px] mx-auto" >
     
-        <img className="invisible tablet:visible tablet:h-full tablet:w-full  " src={About_bg}></img>
+        <img className=" tablet:h-full tablet:w-full  " src={About_bg}></img>
 
       <div className=" tablet:w-[100%]  tablet:min-height">
         <h1 className="tablet:absolute tablet:left-[30rem] tablet:top-9 tablet:text-[2rem] tablet:font-sans tablet:font-bold tablet:bg-gradient-to-bl tablet:from-[black] tablet:via-[#fc942b] tablet:to-[Orange] tablet:bg-clip-text tablet:text-[transparent] tablet:text-stroke tablet:text-stroke-indigo-200 tablet:text-stroke-fill-indigo-600">
