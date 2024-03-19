@@ -1,6 +1,6 @@
 # Hi this is Saurav jha
 - This is React based project
-- Project Title:chefPlate
+- Project Title:chef Plate
 
 # About this project
 - "Chefs Plate"
@@ -19,14 +19,15 @@
 
 # Important Note:
 -If you encounter shimmering UI instead of menus when clicking on restaurants, it's likely due to a CORS (Cross-Origin Resource Sharing) issue. To ensure uninterrupted access to our delectable offerings, we recommend using a VPN like Proton VPN.
+- Hero section
+![chefplateHome](https://github.com/saurav1729/Project-Chef-Plate/assets/115021946/da4a75f0-2175-447e-8138-512bdd37eda5)
+- Cards container fetching dynamic data 
+![chefplatecards](https://github.com/saurav1729/Project-Chef-Plate/assets/115021946/c652a728-8f09-40f2-9c50-8a16b1ec5530)
+- Contact us page
+![chefplatecontact](https://github.com/saurav1729/Project-Chef-Plate/assets/115021946/494323c1-e409-4a70-a242-cd40cf65f9b2)
 
 
 
-
-![Zoomed OUT Image]()
-![Hero section](./src/Utils/chefplateHome.png)
-![cards section](./src/Utils/chefplatecards.png)
-![contact us section](./src/Utils/chefplatecontact.png)
 
 
 
