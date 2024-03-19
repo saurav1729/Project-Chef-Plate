@@ -1,6 +1,6 @@
 # Hi this is Saurav jha
 - This is React based project
--Project Title:chefPlate
+- Project Title:chefPlate
 
 # About this project
 - "Chefs Plate"
@@ -23,10 +23,10 @@
 
 
 
-![Zoomed OUT Image](image.png)
-![Hero section](image-1.png)
-![sign In Section](image-2.png)
-![personal Details](image-3.png)
+![Zoomed OUT Image]()
+![Hero section](./src/Utils/chefplateHome.png)
+![cards section](./src/Utils/chefplatecards.png)
+![contact us section](./src/Utils/chefplatecontact.png)
 
 
 
