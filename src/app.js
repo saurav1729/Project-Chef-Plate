@@ -9,7 +9,7 @@ import Error from "./Components/Error/Error.js";
 import  {Outlet}from "react-router-dom";
 import Footer from "./Components/Footer/Footer.js";
 import ResturantMenu from "./Components/ResturantMenu/ResturantMenu.js";
-
+import Hero from "./Components/Hero/Hero.js"
 /**
  * 
  * *createBrowserRouter and RouterProvider are the two react component to implement routing in react 
@@ -32,9 +32,10 @@ import ResturantMenu from "./Components/ResturantMenu/ResturantMenu.js";
 const App=()=>{
     return(
         <>
-        <Header />
+      
         <Outlet />
-        {/* <Footer /> */}
+
+        <Footer />
         </>
        
     )
@@ -48,16 +49,16 @@ const appRouter=createBrowserRouter(
             children:[
                 {
                     path:"/",
-                    element:[<Body />,<Footer />]
+                    element:[<Header/>,<Body />]
                     
                 },
                 {
                     path:"/about",
-                    element:<About />
+                    element:[<Header/>,<About />]
                 },
                 {
                     path:"/CONTACT",
-                    element:<Contact />
+                    element:[<Header/>,<Hero />,<Contact/>]
                 },
                 {
                     path:"/resturants/:resId",
