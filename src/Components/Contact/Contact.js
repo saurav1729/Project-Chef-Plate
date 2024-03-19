@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contact_img } from '../../Utils/images'
-import { contact_bg } from '../../Utils/images';
+import contact_bg from '../../Utils/contact.png' 
 const Contact = () => {
   return (<>
     <div className="w-screen tablet:relative h- min-height mt-[70px]">
