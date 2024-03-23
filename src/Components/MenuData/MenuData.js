@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Image_url } from '../../Utils/Constants';
-// import './Menudata.css'
+import './Menudata.css'
 const MenuData = (props) => {
     const[img ,setimg]=useState("");
     const{menuData}=props;

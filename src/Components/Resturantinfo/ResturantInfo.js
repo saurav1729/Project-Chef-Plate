@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import './resturantinfo.css'
+import './resturantinfo.css'
 import { Image_url } from '../../Utils/Constants';
 
 const ResturantInfo = (props) => {

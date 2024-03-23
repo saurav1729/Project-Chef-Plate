@@ -1,7 +1,7 @@
 import { RES_API } from "../../Utils/Constants"
 import { useState, useEffect } from "react"
 import { RES_info } from "../../Utils/Constants"
-// import "./resturantMenu.css"
+import "./resturantMenu.css"
 import ResturantInfo from "../Resturantinfo/ResturantInfo"
 import SectionCard from "../SectionCard/SectionCard"
 import { useParams } from "react-router-dom"

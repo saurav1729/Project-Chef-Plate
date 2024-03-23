@@ -1,4 +1,4 @@
-// import './Sectioncards.css';
+import './Sectioncards.css';
 import MenuData from '../MenuData/MenuData';
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
