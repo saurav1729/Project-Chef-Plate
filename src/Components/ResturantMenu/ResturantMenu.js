@@ -22,10 +22,13 @@ const ResturantMenu = () => {
             RES_info+resId
         );
        const json  = await data.json();
-      const array = json?.data?.cards[0]?.card?.card?.info;
+       console.log(json);
+      const array = json?.data?.cards[2]?.card?.card?.info;
+      console.log(array);
       // const array2 = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR;
         
-      const newInfo = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+      const newInfo = json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+      console.log(newInfo);
       // (json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
       setInfo(array);
       SetMenu(newInfo);

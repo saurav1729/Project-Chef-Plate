@@ -53,6 +53,7 @@ const Body = () => {
   //  console.log(newFooditem)
 
     setResList(array);
+    console.log(array);
 
     setDefaultList(array);
   };
