@@ -9,7 +9,7 @@ import { MJ_LinkedIn, MJ_insta,MJ_github,MJ_twitter } from '../../Utils/Constant
 const Footer = () => {
   return (
     <>
-      <footer className="w-screen h-auto footer-bg  ">
+      <footer className="w-screen p-7 h-auto footer-bg  ">
         <img className="footer-logo ml-5" src={logo}></img>
         <div className="flex mobile:flex-row mobile:justify-around  flex-col">
           <div className="flex flex-col gap-4">

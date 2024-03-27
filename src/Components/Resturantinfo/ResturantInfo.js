@@ -15,9 +15,9 @@ const ResturantInfo = (props) => {
   return (
     <>
   
-    <div className='restinfo-card w-[60%] h-[200px] shadow-lg shadow-[#00000005] '>
+    <div className='restinfo-card w-[60%] h-auto shadow-lg shadow-[#00000005] '>
     <h2 className='name'>{name}</h2>
-       <div className='primary-container'>
+       <div className='primary-container mt-[-50px]'>
        <div className='left'>
        <div className="info">{cuisines?.join(',')}</div>
        <div className='info'>{locality},{areaName}</div>
@@ -28,7 +28,7 @@ const ResturantInfo = (props) => {
        </div>
   
        <div className='right'>
-       <img className="image" src={Image_url+logo} alt={name}></img>
+       <img className="imagelogo mt-[15px]" src={Image_url+logo} alt={name}></img>
        <div className='resturant-rating'>
        <i className="fa-solid fa-star rating">
         {avgRatingString}

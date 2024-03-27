@@ -1,6 +1,6 @@
 .restinfo-card{
     width:60%;
-    height: 200px;
+    /* height: 200px; */
     /* background-color: red; */
     box-shadow: #00000005 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
@@ -13,7 +13,7 @@
 }
 
 .name{
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 500;
 }
 
@@ -55,12 +55,12 @@
 
 
 
-/* .image{
+.imagelogo{
     height: 100px;
     width: 100px;
     border-radius: 5px;
     float: center;
-} */
+}
 
 
 .rating {

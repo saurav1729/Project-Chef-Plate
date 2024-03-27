@@ -47,7 +47,7 @@ const MenuData = (props) => {
       </span>
       </div>
       <div>
-      <img className="M_img"src={Image_url+imageId}></img>
+      <img className="M_img mt-[20px]"src={Image_url+imageId}></img>
        <div className='MenuCounter'>
         <span>
         <i className="fa-solid fa-minus minus" onClick={removeValue}></i>
