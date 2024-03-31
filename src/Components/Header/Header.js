@@ -9,8 +9,8 @@ const Header = () => {
   const [loginValue, setLoginValue] = useState("Log in");
 
   return (
-     <div className="w-screen tablet:h-[70px]">
-      <div className=" w-screen h-[4.7rem] top-0 z-20 fixed">
+     <div className="w-full tablet:h-[70px]">
+      <div className=" w-full h-[4.7rem] top-0 z-20 fixed">
               <img className="w-[100%] h-[100%] object-cover rotate-180" src={header_bg}></img>
       </div>
 
