@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Contact_img } from '../../Utils/images'
-import contact_bg from '../../Utils/contact.png' 
+
 import { toast} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {

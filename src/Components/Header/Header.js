@@ -1,7 +1,5 @@
 import { LOGO_URL } from "../../Utils/Constants";
 import { useState } from "react";
-import { IoHomeOutline } from "react-icons/io5";
-import header_bg from "../../resources/Header.jpg"
 import { Link } from "react-router-dom";
 import './Header.css'
 
