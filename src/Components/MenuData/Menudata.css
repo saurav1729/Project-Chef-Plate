@@ -3,9 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     border-radius: 10px;
-    width: 60%;
-    height: 174px;
-    margin: 35px auto;
+    width: 85%;
+    height: auto;
+    margin: 20px auto;
     padding: 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -26,7 +26,7 @@
 
 .item-name{
     margin-right: 4px;
-    font-size: 1.22rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #3e4152;
     word-break: break-word;
@@ -44,7 +44,7 @@
 
 .item-desc{
     margin-right: 4px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #7e808c;
     word-break: break-word;

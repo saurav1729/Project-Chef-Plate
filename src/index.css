@@ -12,6 +12,10 @@
       inset 0 -3px #0003;
   }
 
+  .shadowBox{
+    box-shadow: #265a9d66;
+  }
+
   .rescard-hover {
     box-shadow: 0 0 18px lightgrey, 0 2px 12px palevioletred;
     /* transform: scale(1.5rem); */
@@ -40,6 +44,45 @@
     background-size: 121px 126px;
 
   }
+
+
+   /* clears the 'X' from Internet Explorer */
+ input[type=search]::-ms-clear {  
+  display: none; 
+  width : 0; 
+  height: 0; 
+  }
+  input[type=search]::-ms-reveal { 
+  display: none; 
+  width : 0; 
+  height: 0; 
+  }
+
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+display: none; 
+}
+
+
+.scrollL::-webkit-scrollbar {
+  width: .5em;
+  border-radius: 80px 80px 0 0;
+}
+ 
+.scrollL::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 80px 80px ;
+}
+ 
+.scrollL::-webkit-scrollbar-thumb {
+  background:linear-gradient(#ae59d0,#6e6ef7);
+  outline: 1px solid slategrey;
+  border-radius: 80px 80px;
+}
 
   .eatImage {
     background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1002,h_600/v1678428358/portal/m/seo_web/dweb_header.png");

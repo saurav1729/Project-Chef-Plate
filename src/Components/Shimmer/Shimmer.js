@@ -1,9 +1,9 @@
 import "./shimmer.css"
 
-const Shimmer = () => {
+const Shimmer = ({count,height ,width}) => {
   const CardShimmer = () => (
    
-      <div className="shimmer-cards">
+      <div className="shimmer-cards" style={{ height: height, width: width }}>
         <div className="shimmer-image">
           {/* <img className="image" src={Image_url+cloudinaryImageId} alt=""></img> */}
         </div>
@@ -19,7 +19,7 @@ const Shimmer = () => {
     
   );
 
-  const arr = new Array(15).fill(0);
+  const arr = new Array(count).fill(0);
 
   return (
     <div className="shimmer-container">

@@ -15,8 +15,8 @@ const Hero = () => {
   
 const [showOptions, setShowOptions] = useState(false);
   return (
-    <div className="tablet:relative h-auto w-auto ">
-          <button className="fixed laptop:hidden top-3 right-2 p-2 bg-[#ffffff20] text-[#ffffff] rounded-full mr-4 z-30 " onClick={() => {
+    <div className="tablet:relative mt-5 h-auto w-auto ">
+          <button className="fixed tablet:hidden top-3 right-2 p-2 bg-[#ffffff20] text-[#ffffff] rounded-full mr-4 z-30 " onClick={() => {
           setShowOptions((option)=>!option); 
         }}><i class=" fa-solid fa-bars"></i></button>
         { showOptions &&<div className=' tablet:hidden absolute w-screen h-[330px] top-0 navbarAnimation transition-all ease-out duration-900   left-0 rounded-b-xl bg-[black] bg-opacity-90 bg-blur-sm  z-10' >
@@ -42,12 +42,12 @@ const [showOptions, setShowOptions] = useState(false);
           </ul>
         </div>
 }
-      <div className="absolute tablet:h-[430px] rounded-b-[30px] h-[390px] w-[100%] top-0 -z-2 bg-[#0B0D14]">
+      <div className="absolute tablet:h-[380px] rounded-b-[30px] h-[390px] w-[100%] top-0 -z-2 bg-[#0B0D14]">
         {/* <img  className="w-full h-full rounded-b-[30px] object-cover  " src={hero_bg} ></img> */}
       </div>
 
     <div
-      className=" tablet:flex tablet:flex-row h-[330px] tablet:mx-[39px]   tablet:p-3  tablet:w-auto  tablet:rounded-[21px]   tablet:justify-between z-2"
+      className=" tablet:flex tablet:flex-row h-[300px] tablet:mx-[39px]   tablet:p-3  tablet:w-auto  tablet:rounded-[21px]   tablet:justify-between z-2"
     >
       <div className="text-container mt-12 tablet:mt-0 text-center tablet:w-[50%] h-full w-full flex flex-col tablet:translate-y-14  text-pretty tablet:justify-around  relative tablet:text-animation tablet:mb-4 ">
         <div className="welcome-text  tablet:text-[42px] text-[28px]  italic text-center my-auto   font-[fangsong] me-[40px]  bg-clip-text text-[transparent]"   style={{

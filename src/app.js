@@ -10,6 +10,9 @@ import  {Outlet}from "react-router-dom";
 import Footer from "./Components/Footer/Footer.js";
 import ResturantMenu from "./Components/ResturantMenu/ResturantMenu.js";
 import Hero from "./Components/Hero/Hero.js"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 /**
  * 
  * *createBrowserRouter and RouterProvider are the two react component to implement routing in react 
@@ -17,6 +20,9 @@ import Hero from "./Components/Hero/Hero.js"
  * 
  * *we to use header component in all pages 
  * *we will first create children of App component 
+ * 
+ * //?whenver state variable changes react triggers the reconsilation cycle (rerenders the whole component);
+ * 
  * 
  * 
  * *we will not use anchor tag to link the pages which its respective button only use Link to=""   always use link component
@@ -27,12 +33,25 @@ import Hero from "./Components/Hero/Hero.js"
  */
 
 //?react router dom provides Outlet component which we will use in App after header to and it will call its childeren according to its path
-
+ /* not using key(not acceptable)<<<using index as keys and <<using unique keys(best practice)*/
 
 const App=()=>{
     return(
         <>
-      
+        <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
+
+<Header/>
         <Outlet />
 
         <Footer />
@@ -49,19 +68,20 @@ const appRouter=createBrowserRouter(
             children:[
                 {
                     path:"/",
-                    element:[<Header/>,<Body />]
+                    element:[<Body />]
                     
                 },
                 {
                     path:"/about",
-                    element:[<Header/>,<About />]
+                    element:[<About />]
                 },
                 {
                     path:"/CONTACT",
-                    element:[<Header/>,<Hero />,<Contact/>]
+                    element:[<Hero />,<Contact/>]
                 },
                 {
                     path:"/resturants/:resId",
+                    
                     element:<ResturantMenu />
                 },
             ],

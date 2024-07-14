@@ -8,18 +8,18 @@ import { FaGithub } from "react-icons/fa";
 import { logo, gif } from "../../Utils/Constants";
 import { MJ_LinkedIn, MJ_insta,MJ_github,MJ_twitter } from '../../Utils/Constants'
 import { useState } from 'react';
+import { toast} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
   const form = useRef();
   const[subText,setSubText]=useState('Subscribe us to get more Info...');
   const[showInput, setInput]=useState(1);
-  const handleclick=()=>{
-      setInput(!showInput);
-      
-      setSubText('Thank You for subscribing us');
-  }
-  const sendEmail = (e) => {
+  const handleclick=(e)=>{
     e.preventDefault();
+  
+ 
+   
 
     emailjs
       .sendForm('service_xn2p7nv', 'template_7o3mrft', form.current, {
@@ -29,12 +29,19 @@ const Footer = () => {
         (result) => {
           console.log(result.text);
           console.log('SUCCESS!');
+          setSubText('Thank You for subscribing us');
+          toast.success(subText)
+          setInput(false)
+          form.current.reset(); 
+       
         },
         (error) => {
           console.log('FAILED...', error.text);
         },
       );
-  };
+  
+}
+  
 
   return (
     <>
@@ -43,7 +50,7 @@ const Footer = () => {
         <div className="flex mobile:flex-row mobile:justify-around  flex-col">
           <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between mx-4 mobile:gap-4 gap-2">
-           {showInput && <form ref={form} onSubmit={sendEmail}  >
+           {showInput && <form ref={form}   >
             <input className="p-3 mobile:w-[16rem] w-[240px] mobile:mt-16  mt-5 outline-none text-[14px] text-[white] bg-[#ffffff40] placeholder:text-[#d66363]" name='user_email' type="email" placeholder="abc@gmail.com"></input>
             <button type="submit" onClick={handleclick}  value='send' className="bg-[#03040550] hover:bg-[#030405] text-[#fff] mt-5 mobile:mt-16 p-3">Subscribe</button>
              </form>}

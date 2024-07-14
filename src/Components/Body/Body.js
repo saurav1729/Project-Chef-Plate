@@ -1,6 +1,6 @@
 // import Cards from "./Cards";
 import { Cards } from "../Cards/Cards";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { RES_API } from "../../Utils/Constants";
 // import ResList from "../Utils/mock_data"; "../Utils/mock_data";
@@ -13,6 +13,8 @@ import FoodList from "../FoodList/FoodList";
 import { Image_url } from '../../Utils/Constants';
 import { Cities } from "../../Utils/Cities";
 import resmockdata from "../../Utils/ResMockData";
+import axios from "axios";
+
 
 
 const Body = () => {
@@ -22,10 +24,11 @@ const Body = () => {
   const [searchText, setText] = useState("");
   const [btnclass, setBtnclass] = useState("fa-magnifying-glass");
   const [foodItems, setfoodItems]=useState([]);
+  const rescontainerref = useRef();
   
   //set longitude and latitude for the api
-  const[latitude,setLatitude]=useState();
-  const[longitude,setLongitude]=useState();
+  // const[latitude,setLatitude]=useState();
+  // const[longitude,setLongitude]=useState();
 
   //  console.log(Cities);
   //?whenver state variable changes react triggers the reconsilation cycle (rerenders the whole component);
@@ -38,25 +41,56 @@ const Body = () => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    const data = await fetch(RES_API);
-    const json = await data.json();
+  // const fetchData = async () => {
+  //   try{
+
+
+      
+  //   const data = await fetch(RES_API);
+  //   const json = await data.json();
+  //   console.log(json);
+  
+  //   const array =
+  //     json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+  //       ?.restaurants;
+ 
+  //  const foodData =json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
+  //  console.log(foodData);
+  //  setfoodItems(foodData);
+
+  //   setResList(array);
+  //   // console.log(array);
+
+  //   setDefaultList(array);
+  //   }catch{};
+  // };
+
+
+
+  async function fetchData() {
+    try {
+      const response = await axios.get('https://chefsplate-server.onrender.com/api/restaurants');
+     
+      const json = response.data;
+      
+    console.log(json);
+  
     const array =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
-    
+ 
    const foodData =json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
-  
- const indices=[2,3,4,6,7,8,11,17];
-  const newFooditem = indices.map((index)=>(foodData[index]));
+  //  console.log(foodData);
    setfoodItems(foodData);
-  //  console.log(newFooditem)
 
     setResList(array);
-    console.log(array);
+    // console.log(array);
 
     setDefaultList(array);
-  };
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 
   // console.log(resList);
@@ -70,7 +104,7 @@ const Body = () => {
     return null;
   };
 
-  /* not using key(not acceptable)<<<using index as keys and <<using unique keys(best practice)*/
+ 
 
   return (
     <div className="">
@@ -78,12 +112,12 @@ const Body = () => {
 
       {/* Filter Container */}
 
-      <div className=" justify-between  tablet:w-95%  w-11/12 mx-auto   mt-[2rem] h-auto p-3 tablet:my-[20px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
-        <div className="flt-text tablet:my-[2px] tablet:mx-[20px] tablet:text-[5rem] text-[2rem] font-bold capitalie tablet:space-x-2 bg-gradient-to-r from-[#ae59d0] via-[#ed4e4e] to-[#6e6ef7] bg-clip-text text-[transparent] font-[Inter] ">
+      <div className=" justify-between  tablet:w-95%  w-11/12 mx-auto   mt-[2rem] h-auto p-3 tablet:my-[10px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[90px] items-center  filter-Container-shadow hover:filter-Container-hover">
+        <div className="flt-text tablet:my-[2px] tablet:mx-[10px] tablet:text-[4rem] text-[2rem] font-bold capitalie tablet:space-x-2 bg-gradient-to-r from-[#ae59d0] via-[#ed4e4e] to-[#6e6ef7] bg-clip-text text-[transparent] font-[Inter] ">
           <h1>Satisfy Your Cravings</h1>
         </div>
         <Link hrefLang="#res-container"><button
-          className="filter-btn  tablet:py-[10px] tablet:px-[20px] tablet:mx-[20px] text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
+          className="filter-btn  tablet:py-[10px] tablet:px-[20px] tablet:mx-[20px]  text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
           onClick={() => {
             let filteredList = resList.filter(
               (resList) => resList.info.avgRating > 4.0
@@ -98,6 +132,7 @@ const Body = () => {
               setNewName(NewButtonName);
               setResList(defaultList);
             }
+            rescontainerref.current.scrollIntoView({ behavior: "smooth" });
           }}
         >
           {buttonName}
@@ -152,7 +187,7 @@ const Body = () => {
 
       
 
-      <div className="search-container justify-center w-90% h-[40px] my-[50px] mx-5% flex items-center sticky -6 top-4">
+      <div ref={rescontainerref} className="search-container justify-center w-90% h-[40px] my-[50px] mx-5% flex items-center sticky -6 top-4">
         <div className="search-box bg-[#fff] rounded-[20px] mobile:w-4/12 p-[10px] shadow-[#d688d0] shadow-[0_2px_8px] flex justify-between relative">
           <input
           className="bg-[#0000] mt-1 w-9/12 h-[20px]  text-[18px] ms-[9px] text-ellipsis text-left focus:outline-none placeholder:text-[#bd7979] "
