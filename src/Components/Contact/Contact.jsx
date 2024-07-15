@@ -37,7 +37,7 @@ const Contact = () => {
   <form ref={form} onSubmit={sendEmail}>
     <div className="w-auto relative h-auto pb-5 mt-2 rounded-t-3xl tablet:rounded-none tablet:mt-[40px] bg-[#0B0D14] pt-5">
       <div className='h-auto w-[90%] mx-auto'>
-        <h2 className='text-[50px] font-[700] text-stroke-fill-[#fff] bg-clip-border text-stroke  text-stroke-black'>Get In Touch</h2>
+        <h2 className='text-[50px] font-[700] text-stroke-fill-[#fff] bg-clip-border text-stroke text-[#fff]  text-stroke-black'>Get In Touch</h2>
         <p className='text-[18px] text-[#ffffff50] w-9/12'>Want to get in Touch. We would Love to hear from you.Fill the Form So That we can Reach to You</p>
       </div>
       <div className='flex flex-col my-[2rem] mx-5 tablet:mx-0 gap-12 justify-around tablet:flex-row '>

@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -96,7 +97,7 @@ module.exports = {
     }
   },
   plugins: [
-    require("@designbycode/tailwindcss-text-stroke"),
+    // require("@designbycode/tailwindcss-text-stroke"),
   ],
 }
 

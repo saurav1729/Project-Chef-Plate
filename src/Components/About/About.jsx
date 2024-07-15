@@ -1,4 +1,4 @@
-import { cloud } from "../../Utils/cloud.png";
+
 import { Meteors } from "../Meteors";
 import { TextGenerateEffect } from "../UI/text-generate-effect";
 

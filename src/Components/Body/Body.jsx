@@ -25,7 +25,7 @@ const Body = () => {
   const [btnclass, setBtnclass] = useState("fa-magnifying-glass");
   const [foodItems, setfoodItems]=useState([]);
   const rescontainerref = useRef();
-  
+  // console.log(defaultList)
   //set longitude and latitude for the api
   // const[latitude,setLatitude]=useState();
   // const[longitude,setLongitude]=useState();
@@ -76,15 +76,16 @@ const Body = () => {
     console.log(json);
   
     const array =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
+        console.log(array);
  
    const foodData =json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
   //  console.log(foodData);
    setfoodItems(foodData);
 
     setResList(array);
-    // console.log(array);
+  
 
     setDefaultList(array);
     } catch (error) {
@@ -98,8 +99,8 @@ const Body = () => {
   //*function for fetching the shimmer component
 
   const fetchshimmer = () => {
-    if (defaultList.length === 0) {
-      return <Shimmer />;
+    if (!defaultList) {
+      return <Shimmer count={8} />;
     }
     return null;
   };
@@ -112,12 +113,12 @@ const Body = () => {
 
       {/* Filter Container */}
 
-      <div className=" justify-between  tablet:w-95%  w-11/12 mx-auto   mt-[2rem] h-auto p-3 tablet:my-[10px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[90px] items-center  filter-Container-shadow hover:filter-Container-hover">
+      <div className=" justify-between  tablet:w-95%  w-11/12 mx-auto   mt-[4rem] h-auto p-3 tablet:my-[10px] tablet:mx-[39px] flex rounded-[12px] tablet:mt-[120px] items-center  filter-Container-shadow hover:filter-Container-hover">
         <div className="flt-text tablet:my-[2px] tablet:mx-[10px] tablet:text-[4rem] text-[2rem] font-bold capitalie tablet:space-x-2 bg-gradient-to-r from-[#ae59d0] via-[#ed4e4e] to-[#6e6ef7] bg-clip-text text-[transparent] font-[Inter] ">
           <h1>Satisfy Your Cravings</h1>
         </div>
         <Link hrefLang="#res-container"><button
-          className="filter-btn  tablet:py-[10px] tablet:px-[20px] tablet:mx-[20px]  text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
+          className="filter-btn  tablet:py-[10px] py-[10px] tablet:px-[20px] tablet:mx-[20px]  text-[16px] text-center rounded-[8px] text-[#ffffff] bg-gradient-to-r from-[#ae59d0] to-purple border-[2px]  border-[#3498db]"
           onClick={() => {
             let filteredList = resList.filter(
               (resList) => resList.info.avgRating > 4.0
@@ -142,7 +143,7 @@ const Body = () => {
 
       <div className="image_list flex gap-3 my-[20px] mx-[60px] overflow-x-scroll no-scroll mobile:w-[90% ] w-11/12 mx-auto snap-x snap-mandatory ">
       
-     { foodItems.slice().map((food) => (
+     {foodItems && foodItems.slice().map((food) => (
             // <FoodList key={food?.id} fooddata={food} />
             // <div className='food_card'>
             <img className="mobile:h-[164px]  h-[100px] w-[100px] mobile:w-[auto] object-contain mobile:object-cover cursor-pointer snap-center" src={Image_url+food?.imageId}   onClick={() => {
@@ -197,7 +198,7 @@ const Body = () => {
             onChange={(e) => setText(e.target.value)}
             onKeyDown={(e) => { 
               if (true) { 
-                if (searchText.length === 0) {
+                if (!searchText) {
                   setResList(defaultList);
                 }
                 else{
@@ -218,7 +219,7 @@ const Body = () => {
                 
           
           ></input>
-          <div className="w-[40px] h-[42px] top-[1] pr-2 absolute right-0 p-[10px]  border-r-gray  rounded-[0px_20px_20px_0]" style={{ boxShadow: "-1px 0px 3px #94bbe9"}}>
+          <div className="w-[40px] h-[42px] top-[0] pr-2 absolute right-0 p-[10px]  border-r-gray  rounded-[0px_20px_20px_0]" style={{ boxShadow: "-1px 0px 3px #94bbe9"}}>
           <i
           
             className={btnclass + " " + "fa-solid" + " " + "mr-[5px] cursor-pointer text-[20px]  hover:scale-110"}
@@ -228,7 +229,7 @@ const Body = () => {
               }
               else{
               if (btnclass === "fa-magnifying-glass") {
-                if (searchText.length === 0) {
+                if (!searchText) {
                   setResList(defaultList);
                 } else {
                   const filteredRestaurants = defaultList.filter((res) => {
@@ -257,10 +258,10 @@ const Body = () => {
       {fetchshimmer()}
 
       <div className="res-container  flex flex-wrap gap-4 mobile:gap-2 mb-3  justify-center " id="res-container">
-        {resList.length === 0 && defaultList.length!=0? (
+        {!resList && defaultList? (
           <div>No result fount for {searchText}</div>
         ) : (
-          resList.map((resturant) => (
+         resList&& resList.map((resturant) => (
             <Link   key={resturant?.info?.id}  to={"/resturants/"+ resturant?.info?.id}><Cards resdata={resturant} /></Link>
           ))
         )}

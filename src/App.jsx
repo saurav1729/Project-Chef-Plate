@@ -1,15 +1,14 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
-import Body from "./Components/Body/Body";
-import Header from "./Components/Header/Header";
-import About from "./Components/About/About.js";
+import Body from "./Components/Body/Body.jsx";
+import Header from "./Components/Header/Header.jsx";
+import About from "./Components/About/About.jsx";
 import { createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom";
-import Contact from "./Components/Contact/Contact.js";
-import Error from "./Components/Error/Error.js";
-import  {Outlet}from "react-router-dom";
-import Footer from "./Components/Footer/Footer.js";
-import ResturantMenu from "./Components/ResturantMenu/ResturantMenu.js";
-import Hero from "./Components/Hero/Hero.js"
+import Contact from "./Components/Contact/Contact.jsx";
+import Error from "./Components/Error/Error.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import ResturantMenu from "./Components/ResturantMenu/ResturantMenu.jsx";
+import Hero from "./Components/Hero/Hero.jsx"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -85,7 +84,7 @@ const appRouter=createBrowserRouter(
                     element:<ResturantMenu />
                 },
             ],
-            errorElement:<Error/>
+            // errorElement:<Error/>
         }
     ]
 )

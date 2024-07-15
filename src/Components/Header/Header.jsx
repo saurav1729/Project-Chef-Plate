@@ -14,9 +14,9 @@ const Header = () => {
 
 
 
-      <div className=" w-screen flex justify-between items-center  fixed top-0 z-20 pr-4 pt-1 bg-[#1c1c1c]   ">
-          <div className="rounded-full w-[6.7rem] h-[3.5rem]">
-              <img className="object-cover h-[3rem] w-[6.7rem] my-auto mt-1 ml-2" src={LOGO_URL} alt="Logo" />
+      <div className=" w-screen flex justify-between items-center h-[3.5rem]  fixed  z-20 pr-4 pt-1 bg-[#1c1c1c]   ">
+          <div className="rounded-full w-[6.7rem] h-[90%] my-auto  tablet:3.5rem">
+              <img className="object-cover  w-full h-full  ml-2" src={LOGO_URL} alt="Logo" />
           </div>
            
 
