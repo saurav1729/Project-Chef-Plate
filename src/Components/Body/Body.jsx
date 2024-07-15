@@ -70,28 +70,43 @@ const Body = () => {
   async function fetchData() {
     try {
       const response = await axios.get('https://chefsplate-server.onrender.com/api/restaurants');
-     
       const json = response.data;
-      
-    console.log(json);
-  
-    const array =
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-        console.log(array);
- 
-   const foodData =json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
-  //  console.log(foodData);
-   setfoodItems(foodData);
+      console.log(json);
 
-    setResList(array);
+      function findRestaurantsArray(obj) {
+        if (Array.isArray(obj)) {
+          for (let item of obj) {
+            const found = findRestaurantsArray(item);
+            if (found) return found;
+          }
+        } else if (obj !== null && typeof obj === 'object') {
+          if (obj.hasOwnProperty('restaurants') && Array.isArray(obj.restaurants)) {
+            return obj.restaurants;
+          }
+          for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+              const found = findRestaurantsArray(obj[key]);
+              if (found) return found;
+            }
+          }
+        }
+        return null;
+      }
   
-
-    setDefaultList(array);
+      const restaurantsArray = findRestaurantsArray(json);
+      if (restaurantsArray) {
+        console.log(restaurantsArray);
+        setResList(restaurantsArray);
+        setDefaultList(restaurantsArray);
+      }
+  
+      const foodData = json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
+      setfoodItems(foodData);
     } catch (error) {
       console.error(error);
     }
   }
+  
 
 
   // console.log(resList);
